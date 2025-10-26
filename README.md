@@ -112,7 +112,7 @@ All outputs are automatically saved to:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Financial-Volatility-Modeling-GARCH/
