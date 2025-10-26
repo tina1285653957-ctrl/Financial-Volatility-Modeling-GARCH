@@ -13,13 +13,15 @@ Financial Volatility Modeling — GARCH Toolkit<br>
 <i>作者：Lyra ｜ 供从业者、研究人员和金融学生参考</i>
 </blockquote>
 
+---
 
-
-##  Overview 简介
+###  Overview 简介
 
 This toolkit provides a **comprehensive, modular framework** for modeling and forecasting financial volatility using **GARCH (Generalized Autoregressive Conditional Heteroskedasticity)** models. Built with flexibility and reusability in mind, it supports multiple data sources and offers complete end-to-end volatility analysis workflow.
 
 大家好，我是 Lyra！这是我整理的一个用于金融波动率建模的工具箱，主要使用 GARCH 模型。如果你对量化投资、风险管理或者市场波动分析感兴趣，这个项目或许能帮到你！
+
+---
 
 ### Why GARCH? 为什么...选择GARCH呢？
 
@@ -35,24 +37,29 @@ GARCH 模型是金融领域里常用的波动率建模方法，它可以：
 - **辅助风险管理** — 为风险价值和投资组合优化提供时变的波动率估计
 - **支持衍生品定价** — 对期权等依赖波动率的产品特别有用
 
-### Key Applications 这个工具可以用在......?
+---
+
+### Key Applications 
 
 - **Risk Management**: Value-at-Risk (VaR) calculation and portfolio risk assessment
 - **Trading Strategies**: Volatility-based position sizing and risk-adjusted returns
 - **Derivatives Pricing**: Volatility forecasts for options and structured products
 - **Market Analysis**: Understanding volatility regimes and market stress periods
 
+### 这个工具可以用在......?
+
 - **风险管理**: 计算风险价值（VaR）和评估投资组合风险
 - **交易策略**: 基于波动率调整头寸大小，优化风险调整后收益
 - **衍生品定价**: 为期权等产品提供波动率预测
 - **市场分析**: 理解不同的波动率区间和市场压力时期
+
 ---
 
-##  Features
+##  Features 功能概览
 
 ###  Core Capabilities 核心能力
 
-- **Flexible Data Sources 灵活的数据来源 由你选择**
+- **Flexible Data Sources**
   -  **yfinance** — No API token required (default)
   -  **🇨🇳 TuShare** — Chinese market data (requires token)
   -  **CSV Files** — Custom data import
@@ -62,6 +69,8 @@ GARCH 模型是金融领域里常用的波动率建模方法，它可以：
   -  **🇨🇳 TuShare** — 获取中国股市数据（需要配置 token，有时有积分限制）
   -  **CSV 文件** — 支持导入自定义数据
 
+
+
 - **Comprehensive Model Specifications**
   -  **Mean Models** — `Zero`, `Constant`, `AR(1)`
   -  **Volatility Models** — `ARCH`, `GARCH`
@@ -69,10 +78,12 @@ GARCH 模型是金融领域里常用的波动率建模方法，它可以：
   -  **Default** — `GARCH(1,1)` with constant mean
 
 - **包含了多种模型**
--  **均值模型** — 零均值、常数均值、AR(1)
--  **波动率模型** — ARCH、GARCH
--  **分布假设** — 正态分布、学生t分布
--  **默认设置** — GARCH(1,1) 配合常数均值
+  -  **均值模型** — 零均值、常数均值、AR(1)
+  -  **波动率模型** — ARCH、GARCH
+  -  **分布假设** — 正态分布、学生t分布
+  -  **默认设置** — GARCH(1,1) 配合常数均值
+
+
 
 - **Complete Analysis Pipeline**
   -  Data loading and preprocessing
@@ -83,13 +94,14 @@ GARCH 模型是金融领域里常用的波动率建模方法，它可以：
   -  Model diagnostics and residual analysis
 
 - **完整的分析流程**
--  数据加载和预处理
--  计算对数收益率
--  估计 GARCH 模型
--  提取条件波动率
--  多期波动率预测
--  模型诊断和残差分析
-  
+  -  数据加载和预处理
+  -  计算对数收益率
+  -  估计 GARCH 模型
+  -  提取条件波动率
+  -  多期波动率预测
+  -  模型诊断和残差分析
+
+
 
 - **Professional Outputs**
   -  High-resolution visualizations
@@ -97,28 +109,29 @@ GARCH 模型是金融领域里常用的波动率建模方法，它可以：
   -  Standardized residuals analysis
   -  CSV exports for forecasts and model summaries
 
-- **专业的输出结果**
--  高清可视化图表
--  年化条件波动率图
--  标准化残差分析
--  预测结果和模型摘要的 CSV 导出
-
-###  User-Friendly Design
-
-- **Single-section parameter configuration** — Change parameters in one place, run the entire workflow
-- **Bilingual documentation** — Chinese and English comments for accessibility
-- **Automatic folder creation** — Output directories created automatically
-- **Error handling** — Clear error messages for data source issues
-
-###  更友好的设计
-
-- **参数集中配置** — 在一个地方修改参数，就能运行整个流程
-- **中英双语注释** — 方便中文用户理解代码
-- **自动创建文件夹** — 输出目录会自动生成
-- **错误处理** — 清晰的数据源错误提示
+- **输出结果**
+  -  高清可视化图表
+  -  年化条件波动率图
+  -  标准化残差分析
+  -  预测结果和模型摘要的 CSV 导出
 
 ---
 
+###  User-Friendly Design
+
+ - **Single-section parameter configuration** — Change parameters in one place, run the entire workflow
+ - **Bilingual documentation** — Chinese and English comments for accessibility
+ - **Automatic folder creation** — Output directories created automatically
+ - **Error handling** — Clear error messages for data source issues
+
+###  更友好的设计
+
+ - **参数集中配置** — 在一个地方修改参数，就能运行整个流程
+ - **中英双语注释** — 方便中文用户理解代码
+ - **自动创建文件夹** — 输出目录会自动生成
+ - **错误处理** — 清晰的数据源错误提示
+
+---
 
 ##  Quick Start 
 ##  快速开始 —— 只需
@@ -152,7 +165,7 @@ Run the notebook to get:
 ##  Outputs 输出内容
 
 All outputs are automatically saved to:
-所有结果会自动保存到
+所有结果会自动保存到：
 
 ### 📁 `figures/` Directory
 
@@ -191,7 +204,6 @@ Financial-Volatility-Modeling-GARCH/
 ```
 
 ---
-
 
 ##  Usage Examples 使用示例
 
@@ -243,6 +255,7 @@ P, Q = 1, 1
 DIST = "normal"
 FORECAST_STEPS = 20
 ```
+
 ---
 
 ## 🐛 Troubleshooting 常见问题
@@ -280,12 +293,12 @@ GitHub: [@tina1285653957-ctrl](https://github.com/tina1285653957-ctrl)
 
 GARCH modeling is powerful for understanding **volatility clustering and risk regimes** in financial markets. This toolkit prioritizes **reusability** and **standardization**: unified data interfaces, fixed modeling steps, and consistent outputs. In real investment research, I adjust distributions and model orders based on residual diagnostics to better match asset characteristics. The goal is to make volatility analysis accessible while maintaining professional standards.
 
-GARCH 模型在理解金融市场中的波动率聚集和风险区间方面真的很强大。我做这个工具箱时特别注重可复用性和标准化：统一的数据接口、固定的建模步骤、一致的输出格式。在实际的投资研究中，我通常会根据残差诊断来调整分布假设和模型阶数，以更好地匹配资产特性。希望这个工具能让波动率分析变得更简单，同时保持专业水准。
+GARCH 模型在理解金融市场中的波动率聚集和风险区间方面真的很强大。我做这个工具箱时特别注重可复用性和标准化：统一的数据接口、固定的建模步骤、一致的输出格式。在实际的投资研究中，我通常会根据残差诊断来调整分布假设和模型阶数，以更好地匹配资产特性。希望这个工具能让波动率分析变得更简单，同时不失专业性。
 
 ---
 
 **⭐ If you find this toolkit useful, please consider giving it a star on GitHub! ⭐**
-**⭐ 如果你觉得这个工具有用，请在 GitHub 上给它一个 star 支持一下！⭐**
+**⭐ 如果你觉得这个工具有用，请在 GitHub 上给它一个 star 支持一下吧！⭐**
 
 ---
 
